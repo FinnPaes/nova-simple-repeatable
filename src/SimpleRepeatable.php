@@ -150,13 +150,6 @@ class SimpleRepeatable extends Field
         return $rules;
     }
 
-    /**
-     * Resolve the field's and it's rows value.
-     *
-     * @param mixed $resource
-     * @param string|null $attribute
-     * @return void
-     */
     public function resolve($resource, $attribute = null): void
     {
         $novaRequest = app()->make(NovaRequest::class);
@@ -177,7 +170,7 @@ class SimpleRepeatable extends Field
             'fields' => $this->fields->resolve(null) // Empty fields
         ]);
 
-        return parent::resolve($resource, $attribute);
+        parent::resolve($resource, $attribute);
     }
 
     /**

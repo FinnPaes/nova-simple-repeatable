@@ -11,6 +11,7 @@ mix
   .webpackConfig({
     externals: {
       vue: 'Vue',
+      'laravel-nova-ui': 'LaravelNovaUi',
     },
     output: {
       uniqueName: 'outl1ne/nova-simple-repeatable',

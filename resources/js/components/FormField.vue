@@ -84,7 +84,7 @@
           </template>
         </draggable>
 
-        <DefaultButton
+        <Button
           v-if="canAddRows"
           @click="addRow"
           class="add-button btn btn-default btn-primary"
@@ -92,7 +92,7 @@
           type="button"
         >
           {{ field.addRowLabel }}
-        </DefaultButton>
+        </Button>
       </div>
     </template>
   </DefaultField>
@@ -104,6 +104,7 @@ import { Errors } from 'laravel-nova'
 import { HandlesValidationErrors, DependentFormField } from 'laravel-nova';
 import HandlesRepeatable from '../mixins/HandlesRepeatable';
 import _set from 'lodash/set';
+import { Button } from 'laravel-nova-ui';
 
 export default {
   mixins: [HandlesValidationErrors, HandlesRepeatable, DependentFormField],

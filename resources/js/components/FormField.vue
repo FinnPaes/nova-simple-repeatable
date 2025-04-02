@@ -109,7 +109,7 @@ import { Button } from 'laravel-nova-ui';
 export default {
   mixins: [HandlesValidationErrors, HandlesRepeatable, DependentFormField],
 
-  components: { Draggable },
+  components: { Draggable, Button },
 
   props: ['resourceName', 'resourceId', 'field'],
 
